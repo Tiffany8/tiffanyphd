@@ -19,7 +19,7 @@ const App: () => JSX.Element = (): JSX.Element => {
 
   return (
     <div className="relative bg-white">
-      <div className="mx-auto flex flex-col flex-wrap items-center justify-center gap-4 bg-gradient-to-r from-fuschia via-violet to-bluepurple-light px-4 sm:h-screen">
+      <div className="mx-auto flex flex-col flex-wrap items-center justify-center gap-4 px-4 sm:h-screen">
         <div className="mt-4 flex w-full flex-col items-center justify-center space-y-4 sm:mt-0 sm:flex-row sm:space-x-12 sm:space-y-0">
           <img
             srcSet={srcSet}
@@ -29,10 +29,10 @@ const App: () => JSX.Element = (): JSX.Element => {
                 (max-width: 1024px) 984px,
                 2048px"
             src={profilePic1024w}
-            className="h-auto max-w-full rounded-full border-8 border-bluepurple-lightest sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+            className="h-auto max-w-full rounded-full border-2 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
             alt="profile picture"
           />
-          <div className="flex flex-col items-center gap-y-4 text-white sm:items-start sm:gap-y-8">
+          <div className="flex flex-col items-center gap-y-4 text-black sm:items-start sm:gap-y-8">
             <p className="font-satisfy text-4xl md:text-6xl lg:text-8xl">
               Tiffany Williams, PhD
             </p>
@@ -44,28 +44,29 @@ const App: () => JSX.Element = (): JSX.Element => {
             </p>
           </div>
         </div>
-        <div className="flex w-full flex-col items-center justify-between gap-4 pb-8 text-xl  sm:flex-row lg:px-8">
+        {/* <div className="mt-4 flex w-full flex-col items-center justify-center space-y-4 sm:mt-0 sm:flex-row sm:space-x-12 sm:space-y-0"> */}
+        <div className="flex flex-col items-center justify-between gap-4 pb-8 text-xl sm:flex-row">
           <button
             onClick={() => navigate('/about')}
-            className="flex h-24 w-48 items-center justify-center rounded-full border-8 border-violet-darkest bg-white px-4 py-2 font-bold text-violet-darkest transition-all duration-200 ease-in-out hover:scale-110 hover:bg-violet-darkest hover:text-white hover:shadow-lg"
+            className="btn btn-primary btn-outline btn-xs flex h-24 w-48 items-center justify-center rounded-full px-4 py-2 font-bold transition-all duration-200 ease-in-out sm:btn-sm md:btn-md lg:btn-lg hover:scale-110 hover:text-white hover:shadow-lg"
           >
             About Me
           </button>
           <button
             onClick={() => navigate('/resume')}
-            className="flex h-24 w-48 items-center justify-center rounded-full border-8 border-bluepurple-dark bg-white px-4 py-2 font-bold text-bluepurple-dark transition-all duration-200 ease-in-out hover:scale-110 hover:bg-bluepurple-dark hover:text-white hover:shadow-lg"
+            className="btn btn-primary btn-outline btn-xs flex h-24 w-48 items-center justify-center rounded-full px-4 py-2 font-bold transition-all duration-200 ease-in-out sm:btn-sm md:btn-md lg:btn-lg hover:scale-110 hover:text-white hover:shadow-lg"
           >
             Resume
           </button>
           <button
             onClick={() => navigate('/projects')}
-            className="flex h-24 w-48 items-center justify-center rounded-full border-8 border-bluepurple-light bg-white px-4 py-2 font-bold text-bluepurple-light transition-all duration-200 ease-in-out hover:scale-110 hover:bg-bluepurple-light hover:text-white hover:shadow-lg"
+            className="btn btn-primary btn-outline btn-xs flex h-24 w-48 items-center justify-center rounded-full px-4 py-2 font-bold transition-all duration-200 ease-in-out sm:btn-sm md:btn-md lg:btn-lg hover:scale-110 hover:text-white hover:shadow-lg"
           >
             Projects
           </button>
           <button
             onClick={() => navigate('/blog')}
-            className="flex h-24 w-48 items-center justify-center rounded-full border-8 border-bluepurple-lightest bg-white px-4 py-2 font-bold text-bluepurple-lightest transition-all duration-200 ease-in-out hover:scale-110 hover:bg-bluepurple-lightest hover:text-white hover:shadow-lg"
+            className="btn btn-primary btn-outline btn-xs flex h-24 w-48 items-center justify-center rounded-full px-4 py-2 font-bold transition-all duration-200 ease-in-out sm:btn-sm md:btn-md lg:btn-lg hover:scale-110 hover:text-white hover:shadow-lg"
           >
             Blog
           </button>
